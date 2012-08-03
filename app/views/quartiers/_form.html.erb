@@ -1,0 +1,25 @@
+<%= form_for(@quartier) do |f| %>
+  <% if @quartier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quartier.errors.count, "error") %> prohibited this quartier from being saved:</h2>
+
+      <ul>
+      <% @quartier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+  </div>
+  <div class="field">
+    <%= f.label :coordonnees %><br />
+    <%= f.text_field :coordonnees %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

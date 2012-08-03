@@ -1,0 +1,25 @@
+<h1>Listing villes</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Coordonnees</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @villes.each do |ville| %>
+  <tr>
+    <td><%= ville.nom %></td>
+    <td><%= ville.coordonnees %></td>
+    <td><%= link_to 'Show', ville %></td>
+    <td><%= link_to 'Edit', edit_ville_path(ville) %></td>
+    <td><%= link_to 'Destroy', ville, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ville', new_ville_path %>

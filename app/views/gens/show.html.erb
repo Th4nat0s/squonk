@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Prenom:</b>
+  <%= @gen.prenom %>
+</p>
+
+<p>
+  <b>Nom:</b>
+  <%= @gen.nom %>
+</p>
+
+<p>
+  <b>Pseudo:</b>
+  <%= @gen.pseudo %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @gen.password %>
+</p>
+
+<p>
+  <b>Avatar:</b>
+  <%= @gen.avatar %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @gen.email %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @gen.dob %>
+</p>
+
+
+<%= link_to 'Edit', edit_gen_path(@gen) %> |
+<%= link_to 'Back', gens_path %>

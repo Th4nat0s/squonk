@@ -1,0 +1,35 @@
+<h1>Listing gens</h1>
+
+<table>
+  <tr>
+    <th>Prenom</th>
+    <th>Nom</th>
+    <th>Pseudo</th>
+    <th>Password</th>
+    <th>Avatar</th>
+    <th>Email</th>
+    <th>Dob</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gens.each do |gen| %>
+  <tr>
+    <td><%= gen.prenom %></td>
+    <td><%= gen.nom %></td>
+    <td><%= gen.pseudo %></td>
+    <td><%= gen.password %></td>
+    <td><%= gen.avatar %></td>
+    <td><%= gen.email %></td>
+    <td><%= gen.dob %></td>
+    <td><%= link_to 'Show', gen %></td>
+    <td><%= link_to 'Edit', edit_gen_path(gen) %></td>
+    <td><%= link_to 'Destroy', gen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gen', new_gen_path %>
